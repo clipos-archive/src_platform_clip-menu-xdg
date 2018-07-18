@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Journaux du noyau CLIP
+Comment=Ensemble des journaux du noyau CLIP (volumineux)
+Exec=/usr/local/bin/ssh -p 23 -X -Y _audit@127.53.0.1 /usr/local/bin/clip-viewer -lt /log/kern.log \"Journaux du noyau CLIP\"
+Icon=info
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Misc;

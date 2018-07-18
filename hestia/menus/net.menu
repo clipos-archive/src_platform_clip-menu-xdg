@@ -1,0 +1,42 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+ "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+
+  <Name>Network</Name>
+  <DirectoryDir>/usr/local/var/menu-xdg/net</DirectoryDir>
+  <Directory>root.directory</Directory>
+
+  <DefaultAppDirs/>
+  <DefaultDirectoryDirs/>
+  <DefaultLayout inline_limit="0"/>
+
+  <Include>
+    <And>
+      <Category>X-CLIP</Category>
+      <Category>Settings</Category>
+      <Category>Network</Category>
+      <Not><Category>X-Advanced</Category></Not>
+    </And>
+  </Include>
+
+  <Menu>
+    <Name>NetProfile</Name>
+    <Directory>net-profiles.directory</Directory>
+    <AppDir>/usr/local/var/menu-xdg/net</AppDir>
+    <Include>
+      <And>
+        <Category>X-CLIP</Category>
+        <Category>Network</Category>
+        <Category>X-Dynamic</Category>
+      </And>
+    </Include>
+  </Menu>
+
+  <Layout>
+    <Filename>config-net.desktop</Filename>
+    <Separator/>
+    <Menuname inline="true">NetProfile</Menuname>
+  </Layout>
+
+</Menu>

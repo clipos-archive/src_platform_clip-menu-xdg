@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Mises à jour niveau Bas
+Comment=Journaux des mises à jour du niveau Bas
+Exec=/usr/local/bin/ssh -p 23 -X -Y _audit@127.53.0.1 /usr/local/bin/clip-viewer -lt /log/rm_b_update.log \"Mises à jour niveau Bas\"
+Icon=security-high
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Info;X-Audit-Nomad;
+OnlyShowIn=X-RMB;

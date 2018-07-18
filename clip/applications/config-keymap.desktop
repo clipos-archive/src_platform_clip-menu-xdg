@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Table de caractères
+Comment=Configurer la table de caractère du clavier
+Exec=/usr/local/bin/lxkeymap
+Icon=preferences-keymap
+Type=Application
+Categories=X-CLIP;Settings;X-Config-Devices;

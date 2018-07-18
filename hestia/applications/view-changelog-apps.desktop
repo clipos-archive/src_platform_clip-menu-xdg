@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Changements secondaires du socle
+Comment=Afficher le changelog applicatif
+Exec=/usr/local/bin/clip-viewer /usr/local/etc/clip-apps-release.html
+Icon=clip-apps
+Type=Application
+Categories=System;X-CLIP;X-Changelog;

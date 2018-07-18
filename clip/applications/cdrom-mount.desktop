@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Connecter un CD-ROM
+Comment=Rendre visible les fichiers d'un CD-ROM présent dans l'ordinateur
+Exec=/usr/local/bin/usbclt cdmount
+Icon=media-optical
+Type=Application
+Categories=X-CLIP;X-Media;X-CDROM;Settings;

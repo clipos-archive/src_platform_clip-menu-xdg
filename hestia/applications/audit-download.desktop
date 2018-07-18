@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Téléchargements de mises à jour
+Comment=Journaux des mises à jour CLIP
+Exec=/usr/local/bin/ssh -p 23 -X -Y _audit@127.53.0.1 /usr/local/bin/clip-viewer -lt /log/download.log \"Téléchargements de mises à jour\"
+Icon=security-high
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Info;X-Audit-Nomad;

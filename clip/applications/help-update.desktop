@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Mises à jour
+Comment=Documentation des fonctions de mises à jour
+Exec=/usr/local/bin/clip-viewer /usr/local/share/help/update.html
+Icon=system-help
+Type=Application
+Categories=X-CLIP;Settings;X-Admin;X-Help;

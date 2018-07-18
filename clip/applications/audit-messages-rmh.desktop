@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Journaux divers niveau Haut
+Comment=Journaux divers du niveau Haut
+Exec=/usr/local/bin/ssh -p 23 -X -Y _audit@127.53.0.1 /usr/local/bin/clip-viewer -lt /log/rm_h_messages.log \"Journaux divers niveau Haut\"
+Icon=info
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Misc;
+OnlyShowIn=X-RMH;

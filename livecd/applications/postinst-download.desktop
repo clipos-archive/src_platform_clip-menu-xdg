@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Configurer les sources de mises à jour
+Comment=Configurer les sources que le système installé utilisera pour télécharger des mises à jour
+Exec=clip-postinst-download
+Icon=download-sources
+Type=Application
+Categories=System;X-CLIP-Livecd;X-Livecd-Postinst;

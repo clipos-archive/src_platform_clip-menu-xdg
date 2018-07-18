@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Installer une clé IKE
+Comment=Installer une clé (privée ou publique) ou son mot de passe pour IPsec/IKE
+Exec=/usr/local/bin/ssh -X -Y -p 22 _admin@127.54.0.1 /bin/install_ike.sh
+Icon=add
+Type=Application
+Categories=X-CLIP;Settings;X-Admin;X-Cryptography;

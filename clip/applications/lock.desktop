@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Verrouiller la session
+Comment=Lance l'écran de veille et verrouille l'ordinateur
+Exec=/usr/local/bin/xscreensaver-lock.sh
+Icon=system-lock-screen
+Type=Application
+Categories=System;X-CLIP;X-Leave;

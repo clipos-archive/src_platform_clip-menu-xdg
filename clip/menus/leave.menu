@@ -1,0 +1,26 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+ "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+  <Name>Leave</Name>
+  <Directory>leave.directory</Directory>
+
+  <DefaultAppDirs/>
+  <DefaultDirectoryDirs/>
+
+  <Include>
+    <And>
+      <Category>X-CLIP</Category>
+      <Category>X-Leave</Category>
+    </And>
+  </Include>
+
+  <Layout>
+    <Filename>lock.desktop</Filename>
+    <Filename>logout.desktop</Filename>
+    <Filename>suspend.desktop</Filename>
+    <Filename>shutdown.desktop</Filename>
+    <Filename>reboot.desktop</Filename>
+  </Layout>
+
+</Menu>

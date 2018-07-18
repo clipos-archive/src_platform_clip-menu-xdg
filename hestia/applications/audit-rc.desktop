@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Journaux de démarrage CLIP
+Comment=Journaux du lancement des services au démarrage
+Exec=/usr/local/bin/ssh -p 23 -X -Y _audit@127.53.0.1 /usr/local/bin/clip-viewer -lt /log/rc.log \"Journaux de démarrage CLIP\"
+Icon=info
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Misc;X-Audit-Nomad;

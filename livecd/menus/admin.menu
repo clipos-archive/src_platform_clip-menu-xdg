@@ -1,0 +1,44 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+ "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+  <Name>Administration</Name>
+  <Directory>admin.directory</Directory>
+
+  <DefaultAppDirs/>
+  <DefaultDirectoryDirs/>
+
+  <Menu>
+  <Name>postinst</Name>
+  <Directory>postinst.directory</Directory>
+	  <DefaultAppDirs/>
+	  <DefaultDirectoryDirs/>
+
+	  <Include>
+	    <And>
+	      <Category>X-CLIP-Livecd</Category>
+	      <Category>X-Livecd-Postinst</Category>
+    	    </And>
+  	  </Include>
+   </Menu>
+
+  <Menu>
+  <Name>config</Name>
+  <Directory>config.directory</Directory>
+	  <DefaultAppDirs/>
+	  <DefaultDirectoryDirs/>
+
+	  <Include>
+	    <And>
+	      <Category>X-CLIP-Livecd</Category>
+	      <Category>X-Livecd-Config</Category>
+    	    </And>
+  	  </Include>
+   </Menu>
+
+   <Layout>
+   	<Menuname>postinst</Menuname>
+   	<Menuname>config</Menuname>
+   </Layout>
+
+</Menu>

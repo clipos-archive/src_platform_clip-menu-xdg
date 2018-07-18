@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Configurer l'audit
+Comment=Configurer les paramètres d'audit du système (stockage des journaux, journalisation réseau)
+Exec=/usr/local/bin/ssh -p 23 -X -Y _audit@127.53.0.1 /usr/local/bin/clip-audit-config
+Icon=preferences-audit
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Config;

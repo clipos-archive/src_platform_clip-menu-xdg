@@ -1,0 +1,65 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+ "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+  <Name>Administration</Name>
+  <Directory>admin.directory</Directory>
+
+  <DefaultAppDirs/>
+  <DefaultDirectoryDirs/>
+
+  <Menu>
+  <Name>devices</Name>
+  <Directory>admin-devices.directory</Directory>
+	  <DefaultAppDirs/>
+	  <DefaultDirectoryDirs/>
+
+	  <Include>
+	    <And>
+	      <Category>X-CLIP</Category>
+	      <Category>Settings</Category>
+	      <Category>X-Config-Devices</Category>
+	      <Not><Category>X-Admin</Category></Not>
+    	    </And>
+  	  </Include>
+   </Menu>
+
+  <Menu>
+  <Name>session</Name>
+  <Directory>admin-session.directory</Directory>
+	  <DefaultAppDirs/>
+	  <DefaultDirectoryDirs/>
+
+	  <Include>
+	    <And>
+	      <Category>X-CLIP</Category>
+	      <Category>Settings</Category>
+	      <Category>X-Config-Session</Category>
+	      <Not><Category>X-Admin</Category></Not>
+    	    </And>
+  	  </Include>
+   </Menu>
+
+   <Menu>
+	  <Name>help</Name>
+	  <Directory>admin-help.directory</Directory>
+	  <DefaultAppDirs/>
+	  <DefaultDirectoryDirs/>
+
+	  <Include>
+	    <And>
+	      <Category>X-CLIP</Category>
+	      <Category>X-Help</Category>
+	      <Not><Category>X-Admin</Category></Not>
+    	    </And>
+  	  </Include>
+   </Menu>
+
+
+   <Layout>
+   	<Menuname>devices</Menuname>
+   	<Menuname>session</Menuname>
+   	<Menuname>help</Menuname>
+   </Layout>
+
+</Menu>

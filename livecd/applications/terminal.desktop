@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Terminal
+Comment=
+Exec=xterm -fg black -bg white -T Terminal -e /bin/bash -l
+Icon=terminal
+Type=Application
+Categories=System;X-CLIP-Livecd;X-Livecd-Main;

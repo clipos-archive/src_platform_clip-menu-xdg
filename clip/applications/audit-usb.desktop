@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Journaux des exports USB
+Comment=Journaux des créations de fichiers sur supports USB non chiffrés
+Exec=/usr/local/bin/ssh -p 23 -X -Y _audit@127.53.0.1 /usr/local/bin/clip-viewer -lt /log/fstrace.log \"Exports USB\"
+Icon=security-high
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Info;

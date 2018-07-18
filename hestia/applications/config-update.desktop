@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Paquetages optionnels
+Comment=Sélectionner les paquetages optionnels et gérer les téléchargements
+Exec=/usr/local/bin/ssh -p 22 -X -Y _admin@127.54.0.1 /usr/local/bin/clip-config -U
+Icon=preferences-update
+Type=Application
+Categories=X-CLIP;Settings;X-Admin;X-Config-Update;

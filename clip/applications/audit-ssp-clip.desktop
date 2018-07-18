@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Alertes SSP CLIP
+Comment=Alertes de protection de la pile d'exécution dans CLIP
+Exec=/usr/local/bin/ssh -p 23 -X -Y _audit@127.53.0.1 /usr/local/bin/clip-viewer -lt /log/ssp.log \"Alertes SSP CLIP\"
+Icon=security-low
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Alert;X-Audit-Nomad;

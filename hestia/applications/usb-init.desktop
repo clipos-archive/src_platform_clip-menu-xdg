@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Effacer et formater
+Comment=Effacer de façon permanente tout le contenu du support USB
+Exec=/usr/local/bin/usbclt clear
+Icon=erase
+Type=Application
+Categories=System;X-CLIP;X-USB-Init;

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Attribution des périphériques
+Comment=Configurer l'attribution des périphériques aux niveaux Haut ou Bas
+Exec=/usr/local/bin/ssh -X -Y -p 22 _admin@127.54.0.1 /usr/local/bin/clip-config -D
+Icon=preferences-desktop-peripherals
+Type=Application
+Categories=X-CLIP;Settings;X-Admin;X-Nomad;X-Config-Devices;
+OnlyShowIn=X-RMH;X-RMB;

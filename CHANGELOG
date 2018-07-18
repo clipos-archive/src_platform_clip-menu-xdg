@@ -1,0 +1,403 @@
+# CLIP ChangeLog for x11-misc/clip-menu-xdg
+
+*clip-menu-xdg-1.4.24 (01 Mar 2017)
+
+  01 Mar 2017; Nicolas Belouin <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.24.ebuild, -clip-menu-xdg-1.4.23.ebuild:
+  Improve status message update and version display
+
+*clip-menu-xdg-1.4.23 (02 Dec 2016)
+
+  02 Dec 2016; Tony Cheneau <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.23.ebuild, -clip-menu-xdg-1.4.22.ebuild:
+  Sync "hestia" entries (clip-hermes) use flag to allow signed/encrypted USB
+  drives.
+
+*clip-menu-xdg-1.4.22 (07 Nov 2016)
+
+  07 Nov 2016; Nicolas Belouin <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.22.ebuild, -clip-menu-xdg-1.4.21.ebuild:
+  Fix issue with full version number display on GTW
+
+*clip-menu-xdg-1.4.21 (21 Sep 2016)
+
+  21 Sep 2016; Nicolas Belouin <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.21.ebuild, -clip-menu-xdg-1.4.20.ebuild:
+  Display full version number in the shield tooltip
+
+*clip-menu-xdg-1.4.20 (06 Jan 2016)
+
+  06 Jan 2016; Piotr Chmielnicki <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.20.ebuild, -clip-menu-xdg-1.4.19.ebuild:
+  Added SSM key management to the menu
+
+*clip-menu-xdg-1.4.19 (01 Sep 2014)
+
+  01 Sep 2014; Tony Cheneau <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.19.ebuild, -clip-menu-xdg-1.4.18.ebuild:
+  Improve the network status tooltip text (IPsec endpoint source address
+  is only displayed once + better typography)
+  Change menu entries in order to improve ergonomy and clarity.
+
+*clip-menu-xdg-1.4.18 (25 Jul 2014)
+
+  25 Jul 2014; Tony Cheneau <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.18.ebuild, -clip-menu-xdg-1.4.17.ebuild:
+  Hovering over the network icon now lists the current network configuration (IP
+  address and gateway), all the IPsec connection and their status. The icon
+  turns "green" only when all the connections are correctly established
+  (previous behavior was to turn green only when the first connection was
+  properly established).
+
+*clip-menu-xdg-1.4.17 (20 Jun 2014)
+
+  20 Jun 2014; Tony Cheneau <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.17.ebuild, -clip-menu-xdg-1.4.16.ebuild:
+  Modify menu entries for clip-hermes (embed audit within the admin menu).
+  Add icon for log analysis (utilities-log-viewer).
+
+*clip-menu-xdg-1.4.16 (03 Jun 2014)
+
+  03 Jun 2014; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.16.ebuild, -clip-menu-xdg-1.4.15.ebuild:
+  Add missing battery keyword to monitor.
+
+*clip-menu-xdg-1.4.15 (02 May 2014)
+
+  02 May 2014; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.15.ebuild, -clip-menu-xdg-1.4.14.ebuild:
+  Purge battery monitor cache when no battery is found, to 
+  deal with temporary unavailability of /sys due to invalid
+  permissions when resuming from ACPI sleep - cleaning the
+  cache forces a recheck 10s later.
+
+*clip-menu-xdg-1.4.14 (02 May 2014)
+
+  02 May 2014; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.14.ebuild, -clip-menu-xdg-1.4.13.ebuild:
+  Switch to /sys interface for battery monitor.
+
+*clip-menu-xdg-1.4.13 (04 Feb 2014)
+
+  04 Feb 2014; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.13.ebuild, -clip-menu-xdg-1.4.12.ebuild:
+  Add USB key import menu entry.
+
+*clip-menu-xdg-1.4.12 (23 Dec 2013)
+
+  23 Dec 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.12.ebuild, -clip-menu-xdg-1.4.11.ebuild:
+  Add download.log audit entry.
+
+*clip-menu-xdg-1.4.11 (17 Oct 2013)
+
+  17 Oct 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.11.ebuild, -clip-menu-xdg-1.4.10.ebuild:
+  Add rc.log audit entry, for use with openrc.
+
+  26 Aug 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  clip-menu-xdg-1.4.10.ebuild:
+  No desktop templates in clip-livecd.
+
+*clip-menu-xdg-1.4.10 (08 Aug 2013)
+
+  08 Aug 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.10.ebuild, -clip-menu-xdg-1.4.9-r3.ebuild:
+  Fix a few warnings in desktop files.
+
+*clip-menu-xdg-1.4.9-r3 (08 Aug 2013)
+
+  08 Aug 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.9-r3.ebuild, -clip-menu-xdg-1.4.9-r2.ebuild:
+  Switch to distutils-r1.
+
+*clip-menu-xdg-1.4.9-r2 (24 Jul 2013)
+
+  24 Jul 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.9-r2.ebuild, -clip-menu-xdg-1.4.9-r1.ebuild:
+  Force rebuild - newer python.
+
+*clip-menu-xdg-1.4.9-r1 (30 Apr 2013)
+
+  30 Apr 2013; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.9-r1.ebuild, -clip-menu-xdg-1.4.9.ebuild:
+  Add clip-livecd dependencies.
+
+*clip-menu-xdg-1.4.9 (22 Apr 2013)
+
+  22 Apr 2013; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.9.ebuild, -clip-menu-xdg-1.4.8.ebuild:
+  Fix user menu transition.
+
+*clip-menu-xdg-1.4.8 (22 Apr 2013)
+
+  22 Apr 2013; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.8.ebuild, -clip-menu-xdg-1.4.7-r1.ebuild:
+  Better help and suspend icons.
+
+*clip-menu-xdg-1.4.7-r1 (17 Apr 2013)
+
+  17 Apr 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.7-r1.ebuild, -clip-menu-xdg-1.4.7.ebuild,
+  +files/reboot.sh:
+  Add reboot.sh from fbpanel-clip to livecd install.
+  Fix deps for livecd.
+
+*clip-menu-xdg-1.4.7 (17 Apr 2013)
+
+  17 Apr 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.7.ebuild, -clip-menu-xdg-1.4.6.ebuild:
+  Further simplify default menu, move help to admin/config 
+  menu.
+  Add clip-livecd config tree.
+  Add suspend menu entry.
+
+*clip-menu-xdg-1.4.6 (08 Apr 2013)
+
+  08 Apr 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.6.ebuild, -clip-menu-xdg-1.4.5.ebuild:
+  Add log analysis GUI by Florent Chabaud. Add audit-nomad
+  menu.
+
+*clip-menu-xdg-1.4.5 (18 Mar 2013)
+
+  18 Mar 2013; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.5.ebuild, -clip-menu-xdg-1.4.4.ebuild:
+  Fix notification encoding.
+
+*clip-menu-xdg-1.4.4 (07 Mar 2013)
+
+  07 Mar 2013; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.4.ebuild, -clip-menu-xdg-1.4.3.ebuild:
+  Explicitly set menu files mode.
+
+*clip-menu-xdg-1.4.3 (04 Mar 2013)
+
+  04 Mar 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.3.ebuild, -clip-menu-xdg-1.4.2.ebuild:
+  Add timezone configuration menu entry, courtesy of Florent
+  Chabaud.
+
+*clip-menu-xdg-1.4.2 (25 Feb 2013)
+
+  25 Feb 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.2.ebuild, -clip-menu-xdg-1.4.1.ebuild:
+  Further simplify menus.
+
+*clip-menu-xdg-1.4.1 (21 Feb 2013)
+
+  21 Feb 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.1.ebuild, -clip-menu-xdg-1.4.0.ebuild:
+  Remove more references to RM_x.
+  Clarify menu layout by merging config and admin menus.
+
+*clip-menu-xdg-1.4.0 (21 Feb 2013)
+
+  21 Feb 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.4.0.ebuild, -clip-menu-xdg-1.3.7.ebuild:
+  Simplify USB menus - no more CLIP, RM_H, RM_B submenus.
+
+*clip-menu-xdg-1.3.7 (05 Feb 2013)
+
+  05 Feb 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.3.7.ebuild, -clip-menu-xdg-1.3.6.ebuild:
+  More fixes for network status monitor, plus fixes for battery
+  monitor, both by Florent Chabaud (#339 and #794 on CLIP-test
+  bugzilla).
+
+*clip-menu-xdg-1.3.6 (10 Jan 2013)
+
+  10 Jan 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.3.6.ebuild, -clip-menu-xdg-1.3.5.ebuild:
+  Fix changelogs menu broken by previous update.
+
+*clip-menu-xdg-1.3.5 (03 Jan 2013)
+
+  03 Jan 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.3.5.ebuild, -clip-menu-xdg-1.3.4.ebuild:
+  Fix race-condition in network status monitor. Change network 
+  status icons. Changes by Florent Chabaud (#339 on CLIP-test
+  bugzilla).
+  Fix warnings in .desktop files. Note : OnlyShowIn=RMx; becomes
+  OnlyShowIn=X-RMx; to be compliant with the spec.
+
+*clip-menu-xdg-1.3.4 (26 Oct 2012)
+
+  26 Oct 2012; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.3.4.ebuild, -clip-menu-xdg-1.3.3.ebuild:
+  Add config-devices shortcut to clip-hermes.
+
+*clip-menu-xdg-1.3.3 (13 Jul 2012)
+
+  13 Jul 2012; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.3.3.ebuild, -clip-menu-xdg-1.3.2.ebuild:
+  Update lock screen command.
+
+*clip-menu-xdg-1.3.2 (10 Jul 2012)
+
+  10 Jul 2012; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.3.2.ebuild, -clip-menu-xdg-1.3.1.ebuild:
+  Add usb mount desktop file.
+
+*clip-menu-xdg-1.3.1 (20 Mar 2012)
+
+  20 Mar 2012; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.3.1.ebuild, -clip-menu-xdg-1.3.0.ebuild:
+  Fix netswitch.sh script for multiple NET NS.
+
+*clip-menu-xdg-1.3.0 (16 Mar 2012)
+
+  16 Mar 2012; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.3.0.ebuild, -clip-menu-xdg-1.2.2.ebuild:
+  Move audit and admin to 127.5X addresses.
+
+*clip-menu-xdg-1.2.2 (16 Mar 2012)
+
+  16 Mar 2012; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.2.2.ebuild, -clip-menu-xdg-1.2.1.ebuild:
+  Add IPsec connections entry for clip-gtw.
+
+*clip-menu-xdg-1.2.1 (01 Feb 2012)
+
+  01 Feb 2012; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.2.1.ebuild, -clip-menu-xdg-1.2.0-r1.ebuild:
+  Fix typo.
+
+*clip-menu-xdg-1.2.0-r1 (17 Jan 2012)
+
+  17 Jan 2012; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.2.0-r1.ebuild, -clip-menu-xdg-1.2.0.ebuild:
+  Add conflict against adeskbar <= 0.4.3-r10 - otherwise a 
+  file conflict on rm_*_session.sh makes the update fail.
+
+*clip-menu-xdg-1.2.0 (17 Jan 2012)
+
+  17 Jan 2012; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.2.0.ebuild, -clip-menu-xdg-1.1.2.ebuild:
+  Add user message transmition through desktop entries with
+  X-CLIP-Msg-{Type,Mode,Content} fields.
+
+*clip-menu-xdg-1.1.2 (29 Dec 2011)
+
+  29 Dec 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.1.2.ebuild, -clip-menu-xdg-1.1.1.ebuild:
+  Add missing lxkeymap entry. Clarify USB menus.
+
+*clip-menu-xdg-1.1.1 (27 Dec 2011)
+
+  27 Dec 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.1.1.ebuild, -clip-menu-xdg-1.1.0.ebuild:
+  Add devices attribution config. Fix some logging .desktops.
+  Switch to clip-config for date/time/ntp configuration.
+
+*clip-menu-xdg-1.1.0 (08 Dec 2011)
+
+  08 Dec 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.1.0.ebuild, -clip-menu-xdg-1.0.13.ebuild:
+  Add RMH/RMB filtering and support single RM jail configurations.
+  Add some more audit entries.
+
+*clip-menu-xdg-1.0.13 (18 Nov 2011)
+
+  18 Nov 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.0.13.ebuild, -clip-menu-xdg-1.0.12.ebuild:
+  Fix audit titles.
+
+*clip-menu-xdg-1.0.12 (08 Nov 2011)
+
+  08 Nov 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.0.12.ebuild, -clip-menu-xdg-1.0.11.ebuild:
+  Another try at a wired net icon. Smallish fixes for the CLIP
+  media menu.
+
+*clip-menu-xdg-1.0.11 (07 Nov 2011)
+
+  07 Nov 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.0.11.ebuild, -clip-menu-xdg-1.0.10.ebuild:
+  Smallish fix for wired net icons - the 'wired network, link up'
+  icon should not look like an unplugged wire.
+  Add missing datemgmt.sh and netswitch.sh scripts from fbpanel. 
+  N.B. : netswitch.sh now uses netd-client - there's no point 
+  pulling in socat anymore.
+
+*clip-menu-xdg-1.0.10 (04 Nov 2011)
+
+  04 Nov 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.0.10.ebuild, -clip-menu-xdg-1.0.9.ebuild:
+  Add separate clip/hestia configs.
+
+*clip-menu-xdg-1.0.9 (02 Nov 2011)
+
+  02 Nov 2011; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.0.9.ebuild, -clip-menu-xdg-1.0.8.ebuild:
+  Add viewer manager and improve focus detection.
+
+*clip-menu-xdg-1.0.8 (19 Oct 2011)
+
+  19 Oct 2011; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.0.8.ebuild, -clip-menu-xdg-1.0.7-r1.ebuild:
+  Rename files xlevel_* to xdom_*
+  Cosmetic change for menu tooltips.
+
+*clip-menu-xdg-1.0.7-r1 (18 Oct 2011)
+
+  18 Oct 2011; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.0.7-r1.ebuild, -clip-menu-xdg-1.0.7.ebuild:
+  Change python-xlib RDEPEND to clip-domains use flag.
+
+*clip-menu-xdg-1.0.7 (18 Oct 2011)
+
+  18 Oct 2011; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.0.7.ebuild, -clip-menu-xdg-1.0.6.ebuild:
+  Fix net_status DHCP parsing.
+
+*clip-menu-xdg-1.0.6 (17 Oct 2011)
+
+  17 Oct 2011; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.0.6.ebuild, -clip-menu-xdg-1.0.5.ebuild:
+  Current level detection set in /usr/local/var/xlevel_{focus,rm}
+  Add libwnck and gnome-python-desktop-base dependencies.
+
+*clip-menu-xdg-1.0.5 (26 Aug 2011)
+
+  26 Aug 2011; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.0.5.ebuild, -clip-menu-xdg-1.0.4.ebuild:
+  Import python library: viewer.
+  Use X security extension.
+
+*clip-menu-xdg-1.0.4 (20 Jul 2011)
+
+  20 Jul 2011; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.0.4.ebuild, -clip-menu-xdg-1.0.3.ebuild:
+  Fix admin applications places.
+
+*clip-menu-xdg-1.0.3 (19 Jul 2011)
+
+  19 Jul 2011; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.0.3.ebuild, -clip-menu-xdg-1.0.2-r1.ebuild:
+  Refresh some icons. Add packages and touchpad configuration entries.
+  Fix leave and packages icons.
+
+*clip-menu-xdg-1.0.2-r1 (31 May 2011)
+
+  31 May 2011; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.0.2-r1.ebuild, -clip-menu-xdg-1.0.2.ebuild:
+  Bump clip-icons (level switch).
+
+*clip-menu-xdg-1.0.2 (12 Apr 2011)
+
+  12 Apr 2011; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.0.2.ebuild, -clip-menu-xdg-1.0.1.ebuild:
+  status-monitor - show no VPN icon.
+
+*clip-menu-xdg-1.0.1 (06 Apr 2011)
+
+  06 Apr 2011; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-menu-xdg-1.0.1.ebuild, -clip-menu-xdg-1.0.0.ebuild:
+  status-monitor - fix battery icon, add netlist watch.
+
+*clip-menu-xdg-1.0.0 (23 Mar 2011)
+
+  23 Mar 2011; Mickaël Salaün <clipos@ssi.gouv.fr>
+  clip-menu-xdg-1.0.0.ebuild:
+  Initial import.

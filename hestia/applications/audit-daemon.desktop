@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Journaux des démons CLIP
+Comment=Journaux des tâches de fond du socle CLIP
+Exec=/usr/local/bin/ssh -p 23 -X -Y _audit@127.53.0.1 /usr/local/bin/clip-viewer -lt /log/daemon.log \"Journaux des démons CLIP\"
+Icon=info
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Misc;X-Audit-Nomad;

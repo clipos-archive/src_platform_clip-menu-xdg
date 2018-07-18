@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Activer « @PROFILE_NAME@ »
+Comment=Changer la configuration réseau avec le profil « @PROFILE_NAME@ »
+Exec=/usr/local/bin/netswitch.sh @PROFILE_NAME@
+Icon=applications-internet
+Type=Application
+Categories=X-CLIP;Network;X-Dynamic;X-Admin;

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Installer un certificat PKCS11
+Comment=Installer un certificat pour l'authentification par carte à puce
+Exec=/usr/local/bin/ssh -X -Y -p 22 _admin@127.54.0.1 /bin/install_pkcs11_cert.sh
+Icon=certificate-add
+Type=Application
+Categories=X-CLIP;Settings;X-Admin;X-Cryptography;

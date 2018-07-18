@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Journaux du pare-feu
+Comment=Flux rejetés par le pare-feu réseau local
+Exec=/usr/local/bin/ssh -p 23 -X -Y _audit@127.53.0.1 /usr/local/bin/clip-viewer -lt /log/fw.log \"Journaux du pare-feu\"
+Icon=network
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Net;X-Audit-Nomad;

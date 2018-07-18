@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Pavé tactile (touchpad)
+Comment=Configurer le dispositif de pointage tactile
+Exec=/usr/local/bin/synaptics-settings.sh
+Icon=synaptics-touchpad
+Type=Application
+Categories=X-CLIP;Settings;X-Config-Devices;

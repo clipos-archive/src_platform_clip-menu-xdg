@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Mettre en veille
+Comment=Verrouille la session et met le poste en veille
+Exec=clip-suspend-request
+Icon=system-suspend
+Type=Application
+Categories=System;X-CLIP;X-Leave;

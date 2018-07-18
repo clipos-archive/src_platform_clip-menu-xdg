@@ -1,0 +1,114 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+ "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+  <Name>Audit</Name>
+  <Directory>audit.directory</Directory>
+
+  <DefaultAppDirs/>
+  <DefaultDirectoryDirs/>
+  <Include>
+    <And>
+      <Category>X-CLIP</Category>
+      <Category>X-Audit</Category>
+      <Category>X-Audit-Nomad</Category>
+      <Not><Category>X-Audit-Alert</Category></Not>
+      <Not><Category>X-Audit-Warning</Category></Not>
+      <Not><Category>X-Audit-Info</Category></Not>
+      <Not><Category>X-Audit-Net</Category></Not>
+      <Not><Category>X-Audit-Misc</Category></Not>
+      <Not><Category>X-Audit-Config</Category></Not>
+    </And>
+  </Include>
+
+  <Menu>
+	  <Name>alert</Name>
+	  <Directory>audit-alert.directory</Directory>
+	  <DefaultAppDirs/>
+	  <DefaultDirectoryDirs/>
+
+	  <Include>
+	    <And>
+	      <Category>X-CLIP</Category>
+	      <Category>X-Audit</Category>
+	      <Category>X-Audit-Alert</Category>
+	      <Category>X-Audit-Nomad</Category>
+    	    </And>
+  	  </Include>
+   </Menu>
+
+  <Menu>
+	  <Name>warning</Name>
+	  <Directory>audit-warning.directory</Directory>
+	  <DefaultAppDirs/>
+	  <DefaultDirectoryDirs/>
+
+	  <Include>
+	    <And>
+	      <Category>X-CLIP</Category>
+	      <Category>X-Audit</Category>
+	      <Category>X-Audit-Warning</Category>
+	      <Category>X-Audit-Nomad</Category>
+    	    </And>
+  	  </Include>
+   </Menu>
+
+  <Menu>
+	  <Name>info</Name>
+	  <Directory>audit-info.directory</Directory>
+	  <DefaultAppDirs/>
+	  <DefaultDirectoryDirs/>
+
+	  <Include>
+	    <And>
+	      <Category>X-CLIP</Category>
+	      <Category>X-Audit</Category>
+	      <Category>X-Audit-Info</Category>
+	      <Category>X-Audit-Nomad</Category>
+    	    </And>
+  	  </Include>
+   </Menu>
+
+  <Menu>
+	  <Name>net</Name>
+	  <Directory>audit-net.directory</Directory>
+	  <DefaultAppDirs/>
+	  <DefaultDirectoryDirs/>
+
+	  <Include>
+	    <And>
+	      <Category>X-CLIP</Category>
+	      <Category>X-Audit</Category>
+	      <Category>X-Audit-Net</Category>
+	      <Category>X-Audit-Nomad</Category>
+    	    </And>
+  	  </Include>
+   </Menu>
+
+  <Menu>
+	  <Name>misc</Name>
+	  <Directory>audit-misc.directory</Directory>
+	  <DefaultAppDirs/>
+	  <DefaultDirectoryDirs/>
+
+	  <Include>
+	    <And>
+	      <Category>X-CLIP</Category>
+	      <Category>X-Audit</Category>
+	      <Category>X-Audit-Misc</Category>
+	      <Category>X-Audit-Nomad</Category>
+    	    </And>
+  	  </Include>
+   </Menu>
+
+  <Layout>
+	<Menuname>alert</Menuname>
+	<Menuname>warning</Menuname>
+	<Menuname>info</Menuname>
+	<Menuname>net</Menuname>
+	<Menuname>misc</Menuname>
+	<Filename>audit-survey.desktop</Filename>
+  </Layout>
+
+
+</Menu>

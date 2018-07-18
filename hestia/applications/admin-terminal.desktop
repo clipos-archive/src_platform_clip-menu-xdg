@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Terminal ADMIN
+Comment=
+Exec=xterm -bg black -fg yellow -title "Terminal ADMIN" -geometry 140x30+50+40 -e /usr/local/bin/ssh -X -Y -p 22 _admin@127.54.0.1
+Icon=terminal
+Type=Application
+Categories=X-CLIP;Settings;X-Admin;X-Advanced;

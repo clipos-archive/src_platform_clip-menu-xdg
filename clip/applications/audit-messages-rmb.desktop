@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Journaux divers niveau Bas
+Comment=Journaux divers du niveau Bas
+Exec=/usr/local/bin/ssh -p 23 -X -Y _audit@127.53.0.1 /usr/local/bin/clip-viewer -lt /log/rm_b_messages.log \"Journaux divers niveau Bas\"
+Icon=info
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Misc;
+OnlyShowIn=X-RMB;

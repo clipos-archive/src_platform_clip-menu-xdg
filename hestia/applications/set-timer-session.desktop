@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Verrouillage d'écran
+Comment=Modifier le temps d'inactivité avant le verrouillage du poste pour la session courante
+Exec=/usr/local/bin/xscreensaver-settime.sh
+Icon=lock-delay
+Type=Application
+Categories=X-CLIP;Settings;X-Config-Session;

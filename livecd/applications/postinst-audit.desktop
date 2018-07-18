@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Configurer la journalisation
+Comment=Modifier les paramètres de journalisation (locale et distante) du poste installé
+Exec=clip-postinst-audit
+Icon=audit
+Type=Application
+Categories=System;X-CLIP-Livecd;X-Livecd-Postinst;

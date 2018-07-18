@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Gestion des clés
+Comment=Documentation des fonctions de gestion des clés
+Exec=/usr/local/bin/clip-viewer /usr/local/share/help/keys.html
+Icon=system-help
+Type=Application
+Categories=X-CLIP;Settings;X-Admin;X-Help;

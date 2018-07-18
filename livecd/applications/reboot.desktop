@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Redémarrer le poste
+Comment=Quitte toutes les applications lancées et redémarre l'ordinateur
+Exec=reboot.sh reboot
+Icon=system-reboot
+Type=Application
+Categories=System;X-CLIP-Livecd;X-Livecd-Leave;

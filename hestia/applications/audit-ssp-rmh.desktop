@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Alertes SSP niveau Haut
+Comment=Alertes de protection de la pile d'exécution au niveau Haut
+Exec=/usr/local/bin/ssh -p 23 -X -Y _audit@127.53.0.1 /usr/local/bin/clip-viewer -lt /log/rm_h_ssp.log \"Alertes SSP niveau Haut\"
+Icon=security-low
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Alert;X-Audit-Nomad;
+OnlyShowIn=X-RMH;

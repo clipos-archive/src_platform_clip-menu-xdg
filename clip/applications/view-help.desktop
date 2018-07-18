@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Aide utilisateur
+Comment=Afficher l'aide utilisateur
+Exec=/usr/local/bin/clip-viewer /usr/local/share/help/main.html
+Icon=system-help
+Type=Application
+Categories=System;X-CLIP;X-Help;

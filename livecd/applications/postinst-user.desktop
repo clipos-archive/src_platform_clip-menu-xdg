@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Configurer les utilisateurs
+Comment=Créer ou supprimer des comptes utilisateurs sur le système installé
+Exec=clip-postinst-user
+Icon=users
+Type=Application
+Categories=System;X-CLIP-Livecd;X-Livecd-Postinst;

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Clé du SSM
+Comment=Visualiser ou modifier la clé du SSM
+Exec=/usr/local/bin/ssm-manage-key
+Icon=password
+Type=Application
+Categories=X-CLIP;Settings;X-Cryptography;

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Alertes PaX
+Comment=Alertes de protection mémoire
+Exec=/usr/local/bin/ssh -p 23 -X -Y _audit@127.53.0.1 /usr/local/bin/clip-viewer -lt /log/pax.log \"Alertes PaX\"
+Icon=security-low
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Alert;X-Audit-Nomad;

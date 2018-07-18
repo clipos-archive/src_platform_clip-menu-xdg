@@ -1,0 +1,130 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+ "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+  <Name>Administration</Name>
+  <Directory>admin.directory</Directory>
+
+  <DefaultAppDirs/>
+  <DefaultDirectoryDirs/>
+
+  <Menu>
+  <Name>devices</Name>
+  <Directory>admin-devices.directory</Directory>
+	  <DefaultAppDirs/>
+	  <DefaultDirectoryDirs/>
+
+	  <Include>
+	    <And>
+	      <Category>X-CLIP</Category>
+	      <Category>Settings</Category>
+	      <Category>X-Config-Devices</Category>
+	      <Not><Category>X-Advanced</Category></Not>
+    	    </And>
+  	  </Include>
+   </Menu>
+
+  <Menu>
+  <Name>session</Name>
+  <Directory>admin-session.directory</Directory>
+	  <DefaultAppDirs/>
+	  <DefaultDirectoryDirs/>
+
+	  <Include>
+	    <And>
+	      <Category>X-CLIP</Category>
+	      <Category>Settings</Category>
+	      <Category>X-Config-Session</Category>
+	      <Not><Category>X-Advanced</Category></Not>
+    	    </And>
+  	  </Include>
+   </Menu>
+
+  <Menu>
+  <Name>time</Name>
+  <Directory>admin-time.directory</Directory>
+	  <DefaultAppDirs/>
+	  <DefaultDirectoryDirs/>
+
+	  <Include>
+	    <And>
+	      <Category>X-CLIP</Category>
+	      <Category>Settings</Category>
+	      <Category>X-Config-Time</Category>
+	      <Not><Category>X-Advanced</Category></Not>
+    	    </And>
+  	  </Include>
+   </Menu>
+
+  <Menu>
+  <Name>update</Name>
+  <Directory>admin-update.directory</Directory>
+	  <DefaultAppDirs/>
+	  <DefaultDirectoryDirs/>
+
+	  <Include>
+	    <And>
+	      <Category>X-CLIP</Category>
+	      <Category>Settings</Category>
+	      <Category>X-Config-Update</Category>
+	      <Not><Category>X-Advanced</Category></Not>
+    	    </And>
+  	  </Include>
+   </Menu>
+
+  <Menu>
+  <Name>crypto</Name>
+  <Directory>admin-keys.directory</Directory>
+	  <DefaultAppDirs/>
+	  <DefaultDirectoryDirs/>
+
+	  <Include>
+	    <And>
+	      <Category>X-CLIP</Category>
+	      <Category>Settings</Category>
+	      <Category>X-Cryptography</Category>
+    	    </And>
+  	  </Include>
+   </Menu>
+
+  <Menu>
+  <Name>advanced</Name>
+  <Directory>admin-advanced.directory</Directory>
+	  <DefaultAppDirs/>
+	  <DefaultDirectoryDirs/>
+
+	  <Include>
+	    <And>
+	      <Category>X-CLIP</Category>
+	      <Category>Settings</Category>
+	      <Category>X-Admin</Category>
+	      <Category>X-Advanced</Category>
+    	    </And>
+  	  </Include>
+   </Menu>
+
+   <Menu>
+	  <Name>help</Name>
+	  <Directory>admin-help.directory</Directory>
+	  <DefaultAppDirs/>
+	  <DefaultDirectoryDirs/>
+
+	  <Include>
+	    <And>
+	      <Category>X-CLIP</Category>
+	      <Category>X-Help</Category>
+    	    </And>
+  	  </Include>
+   </Menu>
+
+   <Layout>
+   	<Menuname>devices</Menuname>
+   	<Menuname>session</Menuname>
+   	<Menuname>time</Menuname>
+   	<Menuname>update</Menuname>
+   	<Menuname>advanced</Menuname>
+   	<Menuname>help</Menuname>
+   	<Menuname>crypto</Menuname>
+   </Layout>
+
+</Menu>

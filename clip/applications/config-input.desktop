@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Clavier et souris
+Comment=Configurer les périphériques d'entrée
+Exec=/usr/local/bin/lxinput
+Icon=keyboard
+Type=Application
+Categories=X-CLIP;Settings;X-Config-Devices;

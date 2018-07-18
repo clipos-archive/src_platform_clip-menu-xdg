@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Configurer les adresses internes
+Comment=Configurer les adresses réseau internes du poste installé
+Exec=clip-postinst-netconst
+Icon=network
+Type=Application
+Categories=System;X-CLIP-Livecd;X-Livecd-Postinst;

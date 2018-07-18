@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Analyse des journaux
+Comment=Analyser et surveiller dynamiquement les journaux (pare-feu réseau, alertes de sécurité, etc...)
+Exec=/usr/local/bin/grepcheck.sh ihm
+Icon=preferences-system-network
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Nomad;

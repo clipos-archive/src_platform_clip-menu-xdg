@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Clonage du support d'installation
+Comment=Clone le support d'installation sur une clé USB
+Exec=clone-livecd.sh
+Icon=drive-removable-media-usb
+Type=Application
+Categories=System;X-CLIP-Livecd;X-Livecd-Main;

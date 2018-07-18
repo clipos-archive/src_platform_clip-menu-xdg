@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Réseau interne
+Comment=Configurer les adresses réseau internes au système CLIP
+Exec=/usr/local/bin/ssh -X -Y -p 22 _admin@127.54.0.1 /usr/local/bin/clip-config -N
+Icon=preferences-system-network
+Type=Application
+Categories=X-CLIP;Settings;Network;X-Admin;X-Advanced;

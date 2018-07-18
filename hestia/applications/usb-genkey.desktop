@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Générer les clés cryptographiques
+Comment=Générer les clés cryptographiques de signature et chiffrement USB
+Exec=/usr/local/bin/usbclt generate 
+Icon=keygen
+Type=Application
+Categories=System;X-CLIP;X-USB-Crypto;

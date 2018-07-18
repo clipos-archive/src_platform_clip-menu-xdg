@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Configurer les profils réseau
+Comment=Configurer les profils de configuration réseau du poste installé
+Exec=clip-postinst-network
+Icon=preferences-system-network
+Type=Application
+Categories=System;X-CLIP-Livecd;X-Livecd-Postinst;

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Déconnecter le support @USB_NAME@
+Comment=Retirer proprement le périphérique afin de ne pas perdre de données
+Exec=
+Icon=usb-umount
+Type=Application
+Categories=X-CLIP;X-Media;X-USB;X-Dynamic;

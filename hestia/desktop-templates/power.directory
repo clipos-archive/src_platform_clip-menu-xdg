@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Alimentation
+Comment=<u>État</u> : @BATTERY_STATUS@\n<u>Charge</u> : @BATTERY_LOAD@\n<u>Temps restant</u> : @BATTERY_TIME@
+Icon=@BATTERY_ICON@
+Type=Directory
+X-CLIP-Msg-Type=@MSG_TYPE@
+X-CLIP-Msg-Mode=@MSG_MODE@
+X-CLIP-Msg-Content=@MSG_CONTENT@

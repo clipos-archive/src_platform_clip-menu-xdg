@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Avertissements CLIP-LSM
+Comment=Avertissements du contrôle d'accès CLIP
+Exec=/usr/local/bin/ssh -p 23 -X -Y _audit@127.53.0.1 /usr/local/bin/clip-viewer -lt /log/clsm.log \"Avertissements CLIP-LSM\"
+Icon=security-medium
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Warning;X-Audit-Nomad;

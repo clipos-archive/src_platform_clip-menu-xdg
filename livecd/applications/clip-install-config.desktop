@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Editer les profils d'installation
+Comment=Modifier les profils de configuration utilisés par l'installeur
+Exec=clip-install-config /mnt/cdrom/config
+Icon=edit
+Type=Application
+Categories=System;X-CLIP-Livecd;X-Livecd-Config;

@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=État du système
+Comment=<u>Version</u> : @CLIP_RELEASE@\n<u>État du système</u> : @UPDATE_STATUS@
+Icon=@UPDATE_ICON@
+Type=Directory

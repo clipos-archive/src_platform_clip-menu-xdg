@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Changements essentiels du socle
+Comment=Afficher le changelog du cœur
+Exec=/usr/local/bin/clip-viewer /etc/shared/clip-release.html
+Icon=clip
+Type=Application
+Categories=System;X-CLIP;X-Changelog;

@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Supports Amovibles CLIP</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15">
+</head>
+<body>
+
+<h1><center>Gestion des supports amovibles CLIP</center></h1>
+
+<br>
+<h2><u>Types de supports</u></h2>
+
+<p>
+Le système CLIP permet la mise en oeuvre de plusieurs types de supports de 
+stockage amovibles USB, qui sont utilisables au sein des différentes cages 
+interactives du système (ADMIN, AUDIT, USER, niveaux Haut et Bas dans le cas 
+d'un poste CLIP-RM) :
+</p>
+
+<ul>
+
+<li><b><u><a name="encauthdef">Supports chiffrés signés</a></u></b></li>
+     <p>
+     Ces supports sont nécessairement initialisés sur un poste CLIP. Ils sont
+     associés par des mécanismes cryptographiques à un niveau (Socle, Haut ou 
+     Bas) et à un utilisateur uniques. Cette association est réalisée par le 
+     biais d'une signature du niveau de sécurité de chaque support, réalisée à
+     l'aide des clés cryptographiques USB de l'utilisateur et du niveau
+     concernés.
+     </p>
+     <p>
+     Ces supports peuvent être montés en lecture-écriture au sein de
+     l'environnement CLIP, dans la cage correspondant à leur niveau. Ils
+     permettent ainsi l'import et l'export de fichiers entre le poste CLIP et
+     des postes tierce partie.
+     </p>
+     <p>
+     Le contenu d'un tel support est chiffré, de manière à en garantir la
+     confidentialité en cas de perte ou de branchement par erreur à un poste
+     de niveau différent.
+     </p>
+     <p>
+     Le montage de supports amovibles chiffrés signés sur un poste autre que
+     CLIP nécessite des pilotes et utilitaires spécifiques, ainsi que
+     l'importation sur le poste des clés cryptographiques associées au support.
+     </p>
+
+<li><b><u><a name="encdef">Supports signés</a></u></b></li>
+     <p>
+     Ces supports sont nécessairement initialisés sur un poste CLIP. Ils sont
+     associés par des mécanismes cryptographiques à un niveau (Socle, Haut ou 
+     Bas) et à un utilisateur uniques. Cette association est réalisée par le 
+     biais d'une signature du niveau de sécurité de chaque support, réalisée à
+     l'aide des clés cryptographiques USB de l'utilisateur et du niveau
+     concernés.
+     </p>
+     <p>
+     Ces supports peuvent être montés en lecture-écriture au sein de
+     l'environnement CLIP, dans la cage correspondant à leur niveau. Ils
+     permettent ainsi l'import et l'export de fichiers entre le poste CLIP et
+     des postes tierce partie.
+     </p>
+     <p>
+     A la différence d'un support chiffré signé, le contenu d'un support signé
+     n'est pas protégé en confidentialité par un chiffrement. Ce contenu doit
+     donc être considéré comme compromis en confidentialité en cas de perte du
+     support ou de branchement sur un poste de niveau différent.
+     En revanche, l'absence de chiffrement permet de monter le support
+     automatiquement sur un poste non CLIP, sans vérification de signature.
+     L'installation de pilotes et utilitaires spécifiques sur le poste tierce
+     partie est néanmoins recommandée, afin de permettre la vérification de
+     signature avant le montage du support.
+     </p>
+     <p>
+     On notera que la mise à oeuvre de supports signés, contrairement à celle
+     des supports chiffrés signées, peut n'être autorisée que pour certains
+     niveaux de sécurité. La liste des niveaux pour lesquels des supports
+     signés sont utilisables constitue un paramètre d'installation du système
+     CLIP, qui n'est pas modifiable après installation.
+     </p>
+
+<li><b><u><a name="noinit">Supports non initialisés</a></u></b></li>
+     <p>
+     Les supports non initialisés correspondent à des supports USB standards,
+     au format FAT32, qui n'ont pas fait l'objet d'une initialisation
+     spécifique par un poste CLIP.
+     </p>
+     <p>
+     Ces supports peuvent, par construction, être montés en lecture-écriture
+     sur un poste non CLIP, sans pilotes ni utilitaires spécifiques. Ils
+     peuvent par ailleurs être montés à n'importe quel niveau au sein d'un
+     système CLIP, au choix de l'utilisateur. En revanche, ce montage sous
+     CLIP est par défaut réalisé en lecture seule, ce qui interdit toute écriture 
+     de fichier sur le support depuis un poste CLIP. Ainsi, ces supports ne 
+     peuvent être utilisés que pour l'import d'informations au sein du système 
+     CLIP, et en aucun cas pour l'export d'informations. Le montage en lecture-écriture 
+     de tels supports peut cependant être autorisé dans certaines cages,
+     en fonction d'une politique de sécurité décidée à l'installation du poste. 
+     La politique habituellement retenue consiste à autoriser le montage de 
+     supports non initialisés en lecture-écriture dans la cage de niveau bas,
+     et uniquement en lecture seule dans toutes les autres cages.
+     </p>
+     <p>
+     L'attention des utilisateurs est par ailleurs attirée sur les risques de 
+     compromission encourrus en cas d'utilisation de tels supports, par 
+     exemple suite à une erreur de manipulation qui conduirait à monter à 
+     un niveau de sécurité "bas" un support contenant des informations de 
+     niveau plus élevé.
+     </p>
+</ul>
+<p>
+Ces différents types sont compatibles a priori avec n'importe quel support de
+stockage amovible USB, qu'il s'agisse de clés USB, de disques externes, ou
+encore de lecteurs de cartes mémoires (ces derniers ne sont néanmoins pas
+testés à ce stade).
+</p>
+<p>
+Les différents types de supports amovibles USB sont montés automatiquement
+dans la cage de niveau approprié, lors de leur branchement et après
+confirmation par l'utilisateur courant du système. Après montage, leur contenu
+est accessible sous le chemin "/mnt/usb" dans l'arborescence de la cage.
+En revanche, le retrait d'un support ainsi monté doit être précédé d'un 
+démontage explicite de ce support, dans la cage dans laquelle il a été monté. 
+La préservation des données inscrites sur le support ne peut être garantie en 
+cas de retrait non précédé d'un démontage.
+</p>
+<p>
+Par ailleurs, les systèmes CLIP permettent aussi l'utilisation de supports de
+type CD-ROM et DVD-ROM, qui peuvent être montés en lecture seule dans les 
+mêmes cages que les supports amovibles USB, le choix de la cage étant laissé à
+l'utilisateur. A la différence des supports USB, un CD-ROM ou DVD-ROM peut
+aussi être monté par l'administrateur CLIP au sein de la cage UPDATE, afin de 
+mettre des paquetages de mise à jour à la disposition du système.
+</p>
+  
+<hr>
+<br>
+<h2><u>Opérations sur les supports USB</u></h2>
+
+<p>
+Les opérations suivantes peuvent être réalisées sur les supports amovibles
+USB, à chaque niveau, à travers le menu USB :
+</p>
+
+<ul>
+
+
+<li><b><u>Initialisation d'un support chiffré signé</u></b></li>
+     <p>
+     Cette opération réalise l'initialisation d'un <a href="#encauthdef">support 
+     chiffré signé</a> pour
+     le niveau concerné, et pour l'utilisateur courant. Le support qui est
+     initialisé correspond au dernier support amovible branché au système, et
+     non monté (suite à l'annulation du montage en sélectionnant "Annuler" dans
+     la fenêtre demandant la confirmation du montage ou la saisie du mot de
+     passe). Seuls les supports non initialisés pour CLIP, ou déjà initialisés
+     (chiffrés signés ou signés) au même niveau par le même utilisateur peuvent
+     être initialisés ainsi.
+     </p>
+     <p>
+     L'initialisation d'un support nécessite de plus la 
+     <a href="#keygen">génération préalable des clés cryptographiques</a> 
+     de l'utilisateur pour le niveau concerné.
+     Le support peut être monté dans la cage concernée au terme de son
+     initialisation. Il pourra ensuite être monté automatiquement lors de
+     chaque connexion ultérieure du support.
+     </p>
+     <p>
+     On notera enfin que l'initialisation d'un support entraîne la perte de toutes
+     les données précédemment inscrites sur ce support.
+     </p>
+
+<li><b><u>Initialisation d'un support signé</u></b></li>
+     <p>
+     Cette opération réalise l'initialisation d'un <a href="#encdef">support 
+     signé</a> pour le 
+     niveau concerné, et pour l'utilisateur courant. Le support qui est
+     initialisé correspond au dernier support amovible branché au système, et
+     non monté (suite à l'annulation du montage en sélectionnant "Annuler" dans
+     la fenêtre demandant la confirmation du montage ou la saisie du mot de
+     passe). Seuls les supports non initialisés pour CLIP, ou déjà initialisés
+     (chiffrés signés ou signés) au même niveau par le même utilisateur peuvent
+     être initialisés ainsi.
+     </p>
+     <p>
+     L'initialisation d'un support nécessite de plus la 
+     <a href="#keygen">génération préalable des clés cryptographiques</a> 
+     de l'utilisateur pour le niveau concerné.
+     Le support peut être monté dans la cage concernée au terme de son
+     initialisation. Il pourra ensuite être monté automatiquement lors de
+     chaque connexion ultérieure du support.
+     </p>
+     <p>
+     Tout comme l'initialisation d'un support chiffré signé, cette opération 
+     entraîne la perte de toutes les données précédemment inscrites sur le support.
+     </p>
+
+<li><b><u><a name="keygen">Génération des clés cryptographiques</a></u></b></li>
+     <p>
+     Cette commande permet de générer les clés cryptographiques utilisées pour
+     le chiffrement des <a href="#encauthdef">supports chiffrés signés</a>, 
+     et la signature de ces supports et des <a href="#encdef">supports signés</a>. 
+     Un tel jeu de clés est spécifique à la
+     fois à un utilisateur et à un niveau de sécurité. 
+     </p>
+     <p>
+     La génération des clés est nécessaire avant toute initialisation de 
+     supports. Il n'est en revanche pas nécessaire de générer de nouvelles 
+     clés pour initialiser un deuxième support de même niveau. Les clés
+     générées peuvent par ailleurs être exportées sur un support amovible non
+     initialisé, afin d'être ensuite importées sur un poste tierce partie.
+     Un mot de passe est demandé à l'utilisateur lors de la génération des
+     clés. Ce mot de passe assure la protection en confidentialité de ces clés,
+     et est demandé à l'utilisateur dans les cas suivants : 
+     </p>
+     <ul>
+       <li>initialisation d'un support (chiffré signé ou signé)</li>
+       <li>montage d'un support chiffré signé.</li>
+     </ul>
+
+
+<li><b><u>Export des clés cryptographiques</u></b></li>
+     <p>
+     Cette commande permet l'export des clés cryptographiques de gestion des
+     supports USB de l'utilisateur courant pour le niveau concerné. Ces clés
+     doivent avoir été préalablement générée pour ce niveau.
+     </p>
+     <p>
+     Les clés sont exportées automatiquement sur le dernier support amovible 
+     branché au système, et non monté (suite à l'annulation du montage en 
+     sélectionnant "Annuler" dans la fenêtre demandant la confirmation du 
+     montage ou la saisie du mot de passe). Ce support doit correspondre à un
+     support non initialisé, contenant une partition au format FAT32.
+     Les clés exportées sont automatiquement chiffrées par le système CLIP
+     avant leur écriture sur le disque. Le déchiffrement des clés est ensuite
+     possible sur un poste tierce partie à l'aide d'outils spécifiques à CLIP,
+     et des clés cryptographiques d'export associées au poste, qui doivent
+     avoir été communiquées à l'utilisateur lors de la réception du poste.
+     </p>
+</ul>
+
+<p>
+Par ailleurs, les opérations suivantes peuvent être réalisées directement depuis
+le menu "Supports amovibles", indépendamment du niveau :
+</p>
+<ul>
+<li><b><u>Déconnexion d'un support USB monté</u></b></li>
+     <p>
+     Cette opération permet de démonter, un support précédemment monté lors de 
+     son branchement ou suite à son initialisation.  L'opération est indépendante 
+     du type de support (<a href="#encauthdef">chiffré-signé</a>, 
+     <a href="#encdef">signé</a>, ou <a href="#noinit">non initialisé</a>), 
+     et nécessaire pour préserver les données inscrites sur le
+     support lors de sa déconnexion. Si plusieurs supports sont montés dans différentes
+     cages, une fenêtre apparaît pour demander à l'utilisateur de choisir lequel démonter.
+     Il est à noter qu'un seul support USB peut être monté à un moment donné dans une 
+     cage quelconque : le montage simultané de plusieurs supports dans une même cage 
+     n'est pas supporté à ce stade.
+     </p>
+
+<li><b><u>Effacement d'un support USB</u></b></li>
+     <p>
+     Cette opération réalise l'effacement d'un support quelconque, en écrasant
+     autant que possible son contenu avant de le formater comme un support 
+     standard non initialisé pour CLIP (une partition unique au format <i>FAT32</i>).
+     Après effacement, le support peut être monté comme un support non initialisé, 
+     ou initialisé à un niveau quelconque. L'opération d'effacement prend généralement
+     plusieurs minutes, ce délai augmentant proportionnellement avec la taille du 
+     support à effacer.
+     </p>
+     <p>
+     Tout comme l'initialisation d'un support, cette opération porte sur le 
+     dernier support connecté au système et non monté, et entraîne la perte de
+     toutes les données précédemment inscrites sur ce support. En revanche, contrairement
+     aux autres opérations, elle n'est pas spécifique à un niveau donné, ce qui
+     explique le fait qu'elle apparaisse en dehors des menus de gestion des supports
+     amovibles par niveau.
+     </p>
+     <p>
+     Il est à noter que l'effacement d'un support amovible USB ne permet pas de garantir
+     l'absence de données rémanentes lisibles par un attaquant éventuel. Par conséquent,
+     un tel effacement ne doit pas être utilisé pour réinitialiser un support précédemment
+     initialisé (sans chiffrement) à un niveau plus élevé.
+     </p>
+
+</ul>
+
+<hr>
+<br>
+
+<h2><u>Opérations sur les CD-ROM</u></h2>
+
+<p>
+Les opérations possibles sur les supports de type CD-ROM et DVD-ROM sont plus
+simples :
+</p>
+<ul>
+<li><b><u>Monter un CD-ROM</u></b></li>
+     <p>
+     Permet de monter un CD-ROM ou DVD-ROM, précédemment inséré dans le
+     lecteur, au sein d'une cage quelconque au choix de l'utilisateur. Le 
+     montage de ces supports n'est, au contraire des supports USB, pas automatique 
+     lors de leur insertion dans le système, du fait de l'impossibilité de 
+     détecter automatiquement l'insertion d'un CD-ROM. Après montage, le contenu 
+     du CD-ROM ou DVD-ROM est accessible sous le chemin "/mnt/cdrom" dans la 
+     cage concernée.
+     <p>
+     A l'instar des supports USB, il n'est pas possible de monter simultanément plusieurs 
+     CD-ROM ou DVD-ROM dans une même cage.
+     </p>
+
+<li><b><u>Ejecter un CD-ROM</u></b></li>
+     <p>
+     Permet de démonter et éjecter un CD-ROM ou DVD-ROM précédemment monté dans une cage.
+     Ce démontage est nécessaire avant de pouvoir extraire le support du lecteur 
+     (dont la porte reste sinon fermée). Si plusieurs CD-ROM sont montés dans 
+     différentes cages, une fenêtre pour demander à l'utilisateur de choisir lequel éjecter.
+     </p>
+
+</ul>
+
+<hr>
+<br>

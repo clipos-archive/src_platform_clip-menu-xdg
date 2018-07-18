@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Comptes utilisateurs
+Comment=Créer ou supprimer des comptes utilisateurs
+Exec=/usr/local/bin/ssh -X -Y -p 22 _admin@127.54.0.1 /usr/local/bin/clip-config -u
+Icon=users
+Type=Application
+Categories=Settings;X-CLIP;X-Admin;X-Advanced;

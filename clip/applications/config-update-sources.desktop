@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Sources de mises à jour
+Comment=Configurer les sources de mises à jour
+Exec=/usr/local/bin/ssh -p 22 -X -Y _admin@127.54.0.1 /usr/local/bin/clip-config -d
+Icon=download-sources
+Type=Application
+Categories=X-CLIP;Settings;X-Admin;X-Advanced;

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Gestion des clés CLIP</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15">
+</head>
+<body>
+<h1><center>Gestion des clés cryptographiques CLIP</center></h1>
+<br>
+<h2><u>Clés utilisées</u></h2>
+
+Les éléments cryptographiques utilisés par un poste CLIP qui peuvent être gérés par 
+l'administrateur local sont de trois types : 
+
+<ul>
+<li><b><u><a name="ipseckeys">Eléments d'authentification pour IPsec</a></u></b></li>
+   <p>
+   Ces éléments sont ceux qui sont utilisés pour authentifier mutuellement le poste 
+   et les passerelles de chiffrement IPsec avec lesquels il interragit (typiquement, 
+   passerelles UPDATE / niveau Haut) afin d'établir des connexions sécurisées par IPsec. Il 
+   s'agit de la clé privée (fichier "ccsd.pvr") du poste et du mot de passe associé 
+   (fichier "ccsd.pwd"). S'y ajoutent, sur les configurations CLIP passerelles uniquement, 
+   les clés publiques (fichiers ".ppr") des postes clients autorisés à dialoguer avec la 
+   passerelle. On notera que sur un poste client, les clés publiques des passerelles 
+   associées au poste ne sont pas modifiables par l'administrateur local. 
+   L'administrateur local peut installer ou supprimer ces fichiers de "clés" ("clé"
+   est ici étendu pour inclure les fichiers de mots de passe), les installations étant
+   généralement réalisées à partir d'un support amovible.
+   </p>
+
+<li><b><u><a name="cacert">Certificat d'autorité pour HTTPS</a></u></b></li>
+   <p>
+   Outre la protection des flux par IPsec, les téléchargements de mises à jour sont 
+   également authentifiés au niveau applicatif par HTTPS. Seul le serveur auprès duquel
+   sont téléchargées les mises à jour est ainsi authentifié, les clients ne s'authentifiant
+   pas eux-mêmes au niveau applicatif. Ainsi, les clients doivent uniquement disposer 
+   du certificat de l'autorité de certification signataire du certificat employé par le 
+   serveur distant pour s'authentifier. Ce certificat d'autorité peut être mis à jour
+   par l'administrateur local, en installant un nouveau certificat typiquement importé à
+   l'aide d'un support amovible.
+   </p>
+
+<li><b><u><a name="pkcs11">Certificats d'autorité PKCS11</a></u></b></li>
+   <p>
+   Les utilisateurs du système CLIP peuvent, selon le type de compte qui leur est attribué,
+   être amenés à s'authentifier auprès du système à l'aide d'une carte à puce, contenant leurs
+   certificats personnels (authentification PKCS11). Ces certificats doivent être signés par 
+   une autorité de certification reconnue par le système. L'administrateur local peut modifier 
+   la liste des certificats d'autorité reconnus pour l'authentification PKCS11.
+   </p>
+
+
+</ul>
+
+<p>On notera bien que le fonctionnement d'un poste CLIP fait intervenir d'autres clés 
+cryptographiques, mais que ces clés ne sont pas manipulables par l'administrateur local,
+et ne sont par conséquent pas détaillées dans le présent document.</p>
+
+<hr>
+
+<h2><u>Actions d'administration</u></h2>
+
+<p>
+Les opérations d'administration des clés qui peuvent être réalisées par l'administrateur
+sont les suivantes, accessibles directement dans le menu "Gestion des clés" de l'interface
+d'administration locale :
+</p>
+
+<ul>
+
+<li><b><u>Installation d'une "clé" pour IPsec</u></b></li>
+   <p>
+   Permet d'installer une <a href="#ipseckeys">"clé" IPsec</a> 
+   (fichier de clé privée ou publique, ou fichier de mot
+   de passe de clé privée). L'administrateur est en premier lieu invité à sélectionner le 
+   fichier à installer, au sein du système de fichiers de la cage ADMIN. Le fichier à installer
+   provennant typiquement d'un support amovible USB précédemment monté dans la cage, la 
+   fenêtre de sélection est initialement positionnée sur le répertoire correspondant à un tel
+   montage. Les autres répertoires restent naturellement accessibles par navigation depuis 
+   cette fenêtre, par exemple afin d'importer un fichier de clé présent sur un CD-ROM monté 
+   dans la cage. Après sélection du fichier à installer, la commande invoque automatiquement 
+   les outils spécifiques permettant son installation avec les permissions adaptées, avant de 
+   confirmer le succès de l'installation. Il est à noter que si un fichier du même nom que le
+   fichier à installer est déjà présent dans la base de clés, il est automatiquement écrasé.
+   </p>
+
+<li><b><u>Suppression d'une "clé" IPsec</u></b></li>
+   <p>
+   Permet de supprimer une "clé" (fichier de clé privée ou publique, ou fichier de mot de passe)
+   présente dans la base de <a href="#ipseckeys">clés IPsec</a> du poste. 
+   L'administrateur est en premier lieu invité à
+   sélectionner le fichier à supprimer (la fenêtre de sélection est prépositionnée dans la base
+   de clé), avant de confirmer la suppression. Le succès de la suppression est indiqué par une
+   troisième fenêtre.
+   </p>
+
+<li><b><u>Installation d'un certificat HTTPS</u></b></li>
+   <p>
+   Permet d'installer un <a href="#cacert">certificat d'autorité HTTPS</a>. 
+   De manière similaire à l'installation de 
+   clés IPsec, une fenêtre de sélection positionnée initialement sur le point de montage des 
+   supports USB permet de choisir le fichier à installer, après quoi les outils spécifiques 
+   d'installation de certificat sont automatiquement invoqués, et une nouvelle fenêtre confirme
+   le succès de l'installation.
+   </p>
+
+<li><b><u>Installation d'un certificat PKCS11</u></b></li>
+   <p>
+   Permet d'installer un <a href="#pkcs11">certificat d'autorité PKCS11</a>, de manière
+   similaire à l'installation d'un certificat d'autorité HTTPS.
+   </p>
+
+</ul>
+
+<hr>
+<br>
+</body>
+</html>

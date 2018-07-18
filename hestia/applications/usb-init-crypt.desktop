@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Formater et chiffrer
+Comment=Réinitialiser un support USB signé chiffré
+Exec=/usr/local/bin/usbclt init 
+Icon=lock
+Type=Application
+Categories=System;X-CLIP;X-USB-Init;

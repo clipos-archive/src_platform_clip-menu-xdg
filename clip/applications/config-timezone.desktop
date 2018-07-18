@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Fuseau horaire
+Comment=Sélectionner le fuseau horaire
+Exec=/usr/local/bin/ssh -X -Y -p 22 _admin@127.54.0.1 /bin/change_timezone.sh
+Icon=applications-internet
+Type=Application
+Categories=X-CLIP;Settings;X-Admin;X-Nomad;X-Config-Time;

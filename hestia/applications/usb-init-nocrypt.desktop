@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Formater et signer
+Comment=Réinitialiser un support USB signé non chiffré
+Exec=/usr/local/bin/usbclt init-cleartext
+Icon=unlock
+Type=Application
+Categories=System;X-CLIP;X-USB-Init;

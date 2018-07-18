@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Clavier virtuel
+Comment=Démarrer et configure le clavier virtuel
+Exec=/usr/local/bin/toggle_kbd.sh
+Icon=keyboard
+Type=Application
+Categories=X-CLIP;Settings;X-Config-Devices;

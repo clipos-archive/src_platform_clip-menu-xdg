@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Configurer l'attribution des périphériques
+Comment=Attribuer les périphériques (imprimantes, carte son, etc.) au niveaux haut ou bas
+Exec=clip-postinst-devices
+Icon=preferences-desktop-peripherals
+Type=Application
+Categories=System;X-CLIP-Livecd;X-Livecd-Postinst;

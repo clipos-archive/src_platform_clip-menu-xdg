@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Installeur CLIP
+Comment=Lance l'interface d'installation CLIP
+Exec=clip-install-gui
+Icon=advanced
+Type=Application
+Categories=System;X-CLIP-Livecd;X-Livecd-Main;

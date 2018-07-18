@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Connecter une clé USB
+Comment=Scanner les périphériques connectés ou non pour les monter
+Exec=/usr/local/bin/usbclt mount
+Icon=usb_mount
+Type=Application
+Categories=X-CLIP;X-Media;X-USB;Settings;

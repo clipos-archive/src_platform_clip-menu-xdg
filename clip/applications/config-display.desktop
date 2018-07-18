@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Paramètres d'affichage
+Comment=Configurer les écrans
+Exec=/usr/local/bin/arandr
+Icon=display
+Type=Application
+Categories=X-CLIP;Settings;X-Config-Devices;

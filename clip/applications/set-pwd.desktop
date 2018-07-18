@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Mot de passe
+Comment=Modifier le mot de passe utilisateur d'ouverture de session
+Exec=/usr/local/bin/clip-chpw
+Icon=preferences-desktop-user-password
+Type=Application
+Categories=X-CLIP;Settings;X-Config-Session;

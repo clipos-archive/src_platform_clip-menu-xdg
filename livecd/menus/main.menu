@@ -1,0 +1,27 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+ "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+  <Name>Main</Name>
+  <Directory>main.directory</Directory>
+
+  <DefaultAppDirs/>
+  <DefaultDirectoryDirs/>
+
+  <Include>
+    <And>
+      <Category>X-CLIP-Livecd</Category>
+      <Category>X-Livecd-Main</Category>
+    </And>
+  </Include>
+
+  <Layout>
+    <Filename>clip-install-gui.desktop</Filename>
+    <Filename>lshw.desktop</Filename>
+    <Filename>clone-livecd.desktop</Filename>
+    <Filename>terminal.desktop</Filename>
+    <Filename>help.desktop</Filename>
+  </Layout>
+
+
+</Menu>

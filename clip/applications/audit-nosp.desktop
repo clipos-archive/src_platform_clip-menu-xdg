@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Alertes IPsec
+Comment=Flux réseaux bloqués en l'absence de tunnel IPsec
+Exec=/usr/local/bin/ssh -p 23 -X -Y _audit@127.53.0.1 /usr/local/bin/clip-viewer -lt /log/nosp.log \"Alertes IPsec\"
+Icon=security-low
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Alert;X-Audit-Nomad;

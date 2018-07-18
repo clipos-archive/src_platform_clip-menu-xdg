@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Déconnecter une clé USB
+Comment=Retirer proprement le périphérique afin de ne pas perdre de données
+Exec=/usr/local/bin/usbclt umount
+Icon=dialog-cancel
+Type=Application
+Categories=X-CLIP;X-Media;X-USB;Settings;

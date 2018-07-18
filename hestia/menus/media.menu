@@ -1,0 +1,55 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+ "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+
+  <Name>Media</Name>
+  <DirectoryDir>/usr/local/var/menu-xdg/media</DirectoryDir>
+  <Directory>root.directory</Directory>
+
+  <DefaultAppDirs/>
+  <DefaultDirectoryDirs/>
+
+  <Include>
+    <And>
+      <Category>X-CLIP</Category>
+      <Category>X-Media</Category>
+      <Category>Settings</Category>
+    </And>
+  </Include>
+
+  <Menu>
+  	<Name>Initialiser un support USB</Name>
+	<Directory>media-init.directory</Directory>
+	<Include>
+	  <And>
+	    <Category>X-CLIP</Category>
+	    <Category>X-USB-Init</Category>
+	  </And>
+	</Include>
+  </Menu>
+
+  <Menu>
+  	<Name>Gérer les clés cryptographiques</Name>
+	<Directory>media-crypto.directory</Directory>
+	<Include>
+	  <And>
+	    <Category>X-CLIP</Category>
+	    <Category>X-USB-Crypto</Category>
+	  </And>
+	</Include>
+  </Menu>
+
+
+  <Layout>
+    <Filename>usb-umount.desktop</Filename>
+    <Filename>usb-mount.desktop</Filename>
+    <Menuname>Initialiser un support USB</Menuname>
+    <Separator/>
+    <Filename>cdrom-mount.desktop</Filename>
+    <Filename>cdrom-umount.desktop</Filename>
+    <Separator/>
+    <Menuname>Gérer les clés cryptographiques</Menuname>
+  </Layout>
+
+</Menu>

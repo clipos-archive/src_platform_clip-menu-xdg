@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Aide de l'installeur
+Comment=Aide de l'installeur
+Exec=clip-viewer /usr/share/clip-livecd/help.html
+Icon=system-help
+Type=Application
+Categories=System;X-CLIP-Livecd;X-Livecd-Main;

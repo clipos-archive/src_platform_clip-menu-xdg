@@ -1,0 +1,20 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+ "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+  <Name>Configuration</Name>
+  <Directory>config.directory</Directory>
+
+  <DefaultAppDirs/>
+  <DefaultDirectoryDirs/>
+
+  <Include>
+    <And>
+      <Category>X-CLIP</Category>
+      <Category>Settings</Category>
+      <Not><Category>X-Media</Category></Not>
+      <Not><Category>X-Admin</Category></Not>
+    </And>
+  </Include>
+
+</Menu>

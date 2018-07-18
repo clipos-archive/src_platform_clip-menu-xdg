@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Fermer la session
+Comment=Quitte toutes les applications lancées et ferme la session
+Exec=!quit
+Icon=system-log-out
+Type=Application
+Categories=System;X-CLIP;X-Leave;

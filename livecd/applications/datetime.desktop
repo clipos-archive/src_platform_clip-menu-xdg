@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Configurer la date et l'heure
+Comment=Configurer la date et l'heure du poste
+Exec=clip-config -t -c /dev/null
+Icon=date
+Type=Application
+Categories=System;X-CLIP-Livecd;X-Livecd-Config;

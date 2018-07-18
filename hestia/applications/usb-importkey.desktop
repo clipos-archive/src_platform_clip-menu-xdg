@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Importer des clés cryptographiques
+Comment=Importer des clés cryptographiques de signature et chiffrement USB
+Exec=/usr/local/bin/usbclt import 
+Icon=drive-removable-media-usb-pendrive
+Type=Application
+Categories=System;X-CLIP;X-USB-Crypto;

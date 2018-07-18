@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Exporter les clés cryptographiques
+Comment=Exporter les clés cryptographiques de signature et chiffrement USB
+Exec=/usr/local/bin/usbclt export 
+Icon=drive-removable-media-usb-pendrive
+Type=Application
+Categories=System;X-CLIP;X-USB-Crypto;

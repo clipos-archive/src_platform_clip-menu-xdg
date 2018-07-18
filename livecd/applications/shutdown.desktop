@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Arrêter le poste
+Comment=Quitte toutes les applications lancées et arrête l'ordinateur
+Exec=reboot.sh halt
+Icon=system-shutdown
+Type=Application
+Categories=System;X-CLIP-Livecd;X-Livecd-Leave;

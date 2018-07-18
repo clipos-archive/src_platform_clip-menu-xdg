@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Éjecter le CD-ROM
+Comment=Éjecte le CD-ROM de l'ordinateur
+Exec=/usr/local/bin/usbclt cdumount
+Icon=media-eject
+Type=Application
+Categories=X-CLIP;X-Media;Settings;X-CDROM;

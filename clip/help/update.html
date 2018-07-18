@@ -1,0 +1,205 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Mises à jour CLIP</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15">
+</head>
+<body>
+
+<h1><center>Gestion des mises à jour CLIP</center></h1>
+<br>
+
+<h2><u>Notion de paquetage</u></h2>
+
+<p>
+Chaque système CLIP est composé d'un ensemble de paquetages, qui constituent chacun
+un module logiciel élémentaire (ensemble d'exécutables, de fichiers de configuration,
+etc.). Chaque paquetage peut être installé ou désinstallé individuellement. Cependant,
+certains paquetages dépendent d'autres paquetages, ces derniers devant être installés 
+pour que les premiers puissent être eux-mêmes installés. Au sein des systèmes CLIP, 
+cette gestion des dépendance est totalement automatisée et ne nécessite aucune action
+de l'administrateur.
+</p>
+
+<p>
+Les paquetages composant un système CLIP sont répartis en catégories selon trois niveaux :
+</p>
+
+<ul>
+
+<li><b><u>Distributions</u></b></li>
+   <p>
+   Une distribution est constituée de l'ensemble des paquetages déployables dans un 
+   compartiment logiciel. Ainsi, les paquetages déployés dans le socle CLIP (coeur et
+   cages UPDATE, USER, ADMIN, AUDIT et X11) constituent, dans leur ensemble, une 
+   distribution. De même, au sein d'un système CLIP-RM, les paquetages déployables dans
+   chaque cage RM (niveau Haut ou Bas) constituent autant de distributions.
+   </p>
+
+<li><b><u>Paquetages primaires / secondaires</u></b></li>
+   <p>
+   Chaque distribution est subdivisée en paquetages primaires et secondaires. Les paquetages
+   primaires correspondent aux composants logiciels essentiels de la distribution. Ils ne 
+   peuvent être mis à jour qu'au cours de la séquence de démarrage du poste, et forment un
+   ensemble autosuffisant, permettant à lui seul d'assurer en particulier les fonctions de 
+   mise à jour. A contrario, les paquetages secondaires sont les composants moins essentiels,
+   qui peuvent être mis à jour en tâche de fond pendant le fonctionnement normal du système. 
+   </p>
+<li><b><u>Paquetages obligatoires / optionnels</u></b></li>
+   <p>
+   Chaque groupe de paquetages, primaires ou secondaires, au sein d'une distribution donnée,  
+   peut encore être réparti entre deux catégories. Les paquetages obligatoires, en premier 
+   lieu, sont ceux qui sont systématiquement installés sur tous les postes CLIP d'un type 
+   donné (CLIP-RM par exemple). L'administrateur local d'un poste CLIP n'a par conséquent
+   aucune gestion particulière à assurer de ces paquetages. En revanche, les paquetages 
+   optionnels ne sont quant à eux pas installés automatiquement sur un poste CLIP. Il s'agit
+   d'une liste de paquetages autorisés, complémentaires des paquetages obligatoires, parmi
+   lesquels l'administrateur local d'un poste donné <a href="#setoptional">peut choisir</a> 
+   ceux qui seront installés 
+   sur son poste. Ces paquetages optionnels permettent de satisfaire des besoins applicatifs
+   spécifiques, sans pour autant alourdir systématiquement l'installation standard d'un poste
+   CLIP. Leur gestion constitue l'une des principales tâches d'administration des mises à jour.
+   Bien qu'il soit tout à fait envisageable de définir des paquetages primaires optionnels, 
+   ceux-ci ne sont pas mis en oeuvre dans les distributions CLIP à ce stade : tous les 
+   paquetages primaires sont obligatoires, les paquetages optionnels disponibles sont tous 
+   secondaires.
+   </p>
+</ul>
+
+<hr>
+<br>
+<h2><u>Principe général des mises à jour CLIP</u></h2>
+
+<p>
+Les opérations de mise à jour d'un poste CLIP sont réparties entre deux étapes, décorrélées 
+dans le temps : le téléchargement d'une part, et l'installation d'autre part.
+</p>
+
+<ul>
+<li><b><u>Téléchargement</u></b></li>
+   <p>
+   Le téléchargement des mises à jour consiste à récupérer de nouveaux paquetages à partir 
+   d'une <a href="#sourcelist">source externe</a> au poste, et à les stocker localement. La source externe est typiquement un serveur HTTPS, accessible uniquement depuis la cage UPDATE (non accessible à 
+   l'utilisateur), à travers un canal de communication réseau sécurisé par IPsec. 
+   Alternativement, la source externe peut également être un CD-ROM, spécifiquement monté par 
+   l'administrateur dans la cage UPDATE. Il est également possible d'utiliser un répertoire 
+   local comme source "externe", afin par exemple de permettre au téléchargement de mises à 
+   jour de niveau Bas de bénéficier des paquetages déjà téléchargés au titre des mises à jour de niveau Haut.
+   </p>
+   <p>
+   Le téléchargement des mises à jour est réalisé pour chaque distribution indépendamment, 
+   de manière périodique (toutes les heures) pendant le fonctionnement normal du système. Chaque
+   téléchargement concerne l'ensemble d'une distribution, tous types de paquetages (primaires 
+   / secondaires, obligatoires / optionnels) confondus. Il est possible d'activer un télé-
+   chargement automatique des mises à jour lors de chaque démarrage du poste, mais cette 
+   option n'est pas sélectionnée par défaut, dans la mesure où elle peut sensiblement ralentir 
+   le démarrage. Son activation n'est souhaitable que dans le cas d'un poste qui n'est utilisé
+   que très occasionnellement.
+   </p>
+   <p>
+   L'administrateur local du poste <a href="#downloadrequest">peut directement lancer un téléchargement</a> 
+   dans une 
+   distribution donnée, en cliquant sur l'action "Lancer un téléchargement <distribution>" dans 
+   le menu approprié. Il peut également modifier la liste de sources de téléchargements de 
+   mises à jour, pour chaque distribution, ainsi que la liste des paquetages optionnels à 
+   installer localement, qui sont automatiquement pris en compte dans les téléchargements.
+   </p>
+
+<li><b><u>Installation</u></b></li>
+   <p>
+   L'installation des paquetages n'est pas directement liée à leur téléchargement. Elle est 
+   réalisée uniquement à partir de la base de paquetages disponibles localement, base qui est
+   par ailleurs maintenue à jour par le service de téléchargement. Contrairement aux 
+   téléchargements, les installations de paquetages primaires et secondaires sont également 
+   décorrélées. L'installation de paquetages primaires (pour chaque distribution successivement)
+   est réalisée uniquement lors du démarrage du poste. L'installation de nouveaux paquetages 
+   primaires du socle CLIP donne lieu à un basculement automatique entre les deux installations 
+   complètes de CLIP présentes sur le disque de chaque poste, de manière à conserver en 
+   permanence la version de CLIP la plus à jour et la version précédente disponibles sur le 
+   même poste. Ce basculement se traduit par un redémarrage automatique du poste au terme de sa 
+   mise à jour. L'installation des paquetages secondaires est également réalisée lors du 
+   démarrage du poste, mais aussi périodiquement (toutes les heures) après cela, pendant le 
+   fonctionnement normal du poste.
+   </p>
+   <p>
+   A la différence des téléchargements, l'administrateur local ne peut pas explicitement lancer
+   l'installation des mises à jour, autrement que par un redémarrage du poste, qui réalise de 
+   facto cette installation. Ses seules actions d'administration éventuelles consistent à 
+   modifier la liste des paquetages optionnels à installer localement, en fonction de ceux qui
+   sont disponibles dans chaque distribution.
+   </p>
+</ul>
+
+<hr>
+<br>
+<h2><u>Actions d'administration</u></h2>
+
+<p>
+Les actions d'administration des mises à jour portent systématiquement sur une distribution
+donnée. Ainsi, les mêmes actions sont proposées pour chaque distribution installée sur le 
+poste, dans autant de sous-menus du menu de gestion des mises à jour. Pour chaque distribution,
+les actions suivantes sont réalisables à travers le menu concerné :
+</p>
+
+<ul>
+<li><b><u><a name="sourcelist">Configuration des sources de téléchargement</a></u></b></li>
+   <p>
+   Cette action permet de modifier les sources de téléchargement de mises à jour pour la
+   distribution considérée, en ouvrant un éditeur de texte sur le fichier de configuration 
+   associé. Ce fichier définit une source de téléchargement par ligne commençant par le mot 
+   clé "deb". Il est à noter que les sources externes de paquetages primaires et secondaires,
+   pour chaque distribution, sont généralement distinctes, ce qui requiert par conséquent au 
+   moins deux sources définies dans chaque fichier de configuration. S'y ajoute potentiellement 
+   une source locale servant à la mutualisation des téléchargements entre les niveaux Haut et Bas par 
+   exemple.
+   </p>
+   <p>
+   La portion de chaque définition de source qui suit le mot clé "deb" correspond à l'adresse 
+   de la source proprement dite, qui peut être soit une adresse HTTPS (commençant par 
+   "https://"), soit un chemin ("copy:///") vers un répertoire local ou un CD-ROM.
+   </p>
+   <p>
+   Une fois les modifications du fichier de configuration effectuées, celles-ci peuvent être 
+   sauvées en tapant "Control + O" (appuyer sur Entrée pour confirmer), avant de quitter 
+   l'éditeur par "Control + X".
+   </p>
+
+<li><b><u><a name="setoptional">Gestion des paquetages optionnels</a></u></b></li>
+   <p>
+   Cette action permet de lister les paquetages optionnels disponibles au sein d'une 
+   distribution donnée, et de sélectionner parmi ceux-ci ceux qui doivent être installés 
+   localement. Elle est réalisée à l'aide d'une interface graphique dédiée, qui affiche 
+   une courte description pour chaque paquetage disponible, ainsi que la sélection courante
+   de paquetages à installer localement. La sélection d'un paquetage se fait en cochant la 
+   ligne correspondante, tandis que la désinstallation peut être réalisée en décochant la 
+   ligne. 
+   </p>
+   <p>
+   Après l'ajout d'un ou plusieurs paquetages optionnels, il est à 
+   noter que les nouveaux  paquetages ne seront pas immédiatement disponibles. Ils seront 
+   d'abord téléchargés lors de la prochaine invocation périodique du service de téléchargement, 
+   puis installés lors de l'invocation suivante du service d'installation (soit un délai 
+   maximum de l'ordre de deux heures). Pour forcer une installation immédiate, l'administrateur 
+   peut néanmoins lancer explicitement le service de téléchargement de la distribution 
+   concernée, après enregistrement des modifications, puis redémarrer le poste pour forcer 
+   l'installation des nouveaux paquetages. Il est rappelé que l'administrateur n'a en aucun cas 
+   à se soucier des dépendances des paquetages optionnels qu'il ajoute à la configuration locale
+   configuration, celles-ci étant automatiquement gérées par les services de mise à jour.
+   </p>
+
+<li><b><u><a name="downloadrequest">Lancement d'un téléchargement</a></u></b></li>
+   <p>
+   Cette action permet de lancer explicitement un téléchargement pour la distribution concernée,
+   en dehors des invocations périodiques et automatiques du service de téléchargement. Elle se 
+   traduit par l'ouverture d'un terminal affichant le résultat du téléchargement. Le succès du 
+   téléchargement se traduit par l'affichage d'un message "Action successfully completed". Tout
+   autre message traduit une erreur, qui pourra être analysée plus finement par l'auditeur 
+   (fichier de journaux "Journaux divers CLIP").
+   </p>
+
+</ul>
+
+<hr>
+<br>

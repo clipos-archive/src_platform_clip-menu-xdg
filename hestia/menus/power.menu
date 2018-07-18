@@ -1,0 +1,8 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+ "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+  <Name>Power</Name>
+  <DirectoryDir>/usr/local/var/menu-xdg/power</DirectoryDir>
+  <Directory>root.directory</Directory>
+</Menu>

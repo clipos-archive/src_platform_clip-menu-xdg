@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Installer un certificat HTTPS
+Comment=Installer un certificat HTTPS pour les téléchargements de mises à jour
+Exec=/usr/local/bin/ssh -X -Y -p 22 _admin@127.54.0.1 /bin/install_dl_cert.sh
+Icon=certificate-add
+Type=Application
+Categories=X-CLIP;Settings;X-Admin;X-Cryptography;

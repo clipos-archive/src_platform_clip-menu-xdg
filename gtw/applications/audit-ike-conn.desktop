@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Connexions IPsec
+Comment=Liste des clients IPsec connectés
+Exec=xterm -title "Connexions IPsec" -geometry 120x52+50+40 -e /usr/local/bin/ssh -p 23 _audit@127.53.0.1 -- watch -n 5 -d -- cat /log/ipsec_clients
+Icon=network
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Net;

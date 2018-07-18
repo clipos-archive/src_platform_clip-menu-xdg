@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Terminal AUDIT
+Comment=
+Exec=xterm -bg black -fg green -title "Terminal AUDIT" -geometry 140x30+50+40 -e /usr/local/bin/ssh -X -Y -p 23 _audit@127.53.0.1
+Icon=terminal
+Type=Application
+Categories=System;X-CLIP;X-Audit;X-Audit-Config;

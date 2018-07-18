@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Liste des périphériques
+Comment=Liste les périphériques présents sur le poste
+Exec=lshw -X
+Icon=device-notifier
+Type=Application
+Categories=System;X-CLIP-Livecd;X-Livecd-Main;
